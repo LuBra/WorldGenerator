@@ -21,7 +21,7 @@ class Generator{
 
     public Generator(int x, int y){
         number_Trees = 10;
-        number_randome_stone = 3;
+        number_randome_stone = 4;
         worldsize_x = x;
         worldsize_y = y;
         init_world();
@@ -72,7 +72,7 @@ class Generator{
     }
     protected void fill_stone_rand(){
         Random rand = new Random();
-        int posy = rand.nextInt(worldsize_y/8) + worldsize_y/2; // worldsize/ 8 damit sie in der oberen hälfte plaziert werden
+        int posy = rand.nextInt(worldsize_y/8) + worldsize_y/2 +3; // worldsize/ 8 damit sie in der oberen hälfte plaziert werden plus 3 damit sie nicht direkt unter der oberfläche sind
         int posx = rand.nextInt(worldsize_x);
         world[posy][posx] = 5;
 
